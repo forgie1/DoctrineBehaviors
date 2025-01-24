@@ -65,7 +65,7 @@ interface NodeInterface
      *
      * @return NodeInterface $this Fluent interface
      **/
-    public function setChildNodeOf(NodeInterface $node = null);
+    public function setChildNodeOf(?NodeInterface $node = null);
 
     /**
      * @param NodeInterface $node the node to append to the children collection

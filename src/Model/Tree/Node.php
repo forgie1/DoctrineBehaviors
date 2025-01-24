@@ -157,7 +157,7 @@ trait Node
     /**
      * {@inheritdoc}
      **/
-    public function setChildNodeOf(NodeInterface $node = null)
+    public function setChildNodeOf(?NodeInterface $node = null)
     {
         $id = $this->getNodeId();
         if (empty($id)) {
@@ -238,7 +238,7 @@ trait Node
      *
      * @return string the json representation of the hierarchical result
      **/
-    public function toJson(\Closure $prepare = null)
+    public function toJson(?\Closure $prepare = null)
     {
         $tree = $this->toArray($prepare);
 
@@ -251,7 +251,7 @@ trait Node
      *
      * @return array the hierarchical result
      **/
-    public function toArray(\Closure $prepare = null, array &$tree = null)
+    public function toArray(?\Closure $prepare = null, ?array &$tree = null)
     {
         if (null === $prepare) {
             $prepare = function(NodeInterface $node) {
@@ -276,7 +276,7 @@ trait Node
      *
      * @return array the flatten result
      **/
-    public function toFlatArray(\Closure $prepare = null, array &$tree = null)
+    public function toFlatArray(?\Closure $prepare = null, ?array &$tree = null)
     {
         if (null === $prepare) {
             $prepare = function(NodeInterface $node) {

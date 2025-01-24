@@ -20,7 +20,7 @@ use Doctrine\ORM\QueryBuilder;
  */
 trait JoinableRepository
 {
-    public function getJoinAllQueryBuilder($alias = null, QueryBuilder $qb = null)
+    public function getJoinAllQueryBuilder($alias = null, ?QueryBuilder $qb = null)
     {
         if (null === $alias) {
             $alias = $this->getAlias($this->getClassName());

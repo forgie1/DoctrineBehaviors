@@ -41,8 +41,8 @@ class TranslatableSubscriber extends AbstractSubscriber
     private $translatableFetchMode;
     private $translationFetchMode;
 
-    public function __construct(ClassAnalyzer $classAnalyzer, callable $currentLocaleCallable = null,
-                                callable $defaultLocaleCallable = null,$translatableTrait, $translationTrait,
+    public function __construct(ClassAnalyzer $classAnalyzer, ?callable $currentLocaleCallable = null,
+                                ?callable $defaultLocaleCallable = null,$translatableTrait, $translationTrait,
                                 $translatableFetchMode, $translationFetchMode)
     {
         parent::__construct($classAnalyzer, false);

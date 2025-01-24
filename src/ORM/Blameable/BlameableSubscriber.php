@@ -51,7 +51,7 @@ class BlameableSubscriber extends AbstractSubscriber
      * @param callable
      * @param string $userEntity
      */
-    public function __construct(ClassAnalyzer $classAnalyzer, $isRecursive, $blameableTrait, callable $userCallable = null, $userEntity = null)
+    public function __construct(ClassAnalyzer $classAnalyzer, $isRecursive, $blameableTrait, ?callable $userCallable = null, $userEntity = null)
     {
         parent::__construct($classAnalyzer, $isRecursive);
 
